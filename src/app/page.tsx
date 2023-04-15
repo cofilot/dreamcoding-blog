@@ -1,47 +1,9 @@
+import { Hero } from '@/components/Hero';
+
 export default function Home() {
   return (
     <section>
-      <ul>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-        <li>home</li>
-      </ul>
+      <Hero />
     </section>
   );
 }
