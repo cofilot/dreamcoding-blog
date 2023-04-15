@@ -12,7 +12,7 @@ export const PostCard: React.FC<Props> = ({
 }) => {
   return (
     <Link href={`posts/${path}`}>
-      <article className='shadow-lg'>
+      <article className='overflow-hidden rounded-sm shadow-lg'>
         <Image
           src={`/images/posts/${path}.png`}
           alt={title}
