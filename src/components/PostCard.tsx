@@ -12,18 +12,22 @@ export const PostCard: React.FC<Props> = ({
 }) => {
   return (
     <Link href={`posts/${path}`}>
-      <Image
-        src={`/images/posts/${path}.png`}
-        alt={title}
-        width={300}
-        height={200}
-      />
-      <div>
-        <time>{date.toString()}</time>
-        <h3>{title}</h3>
-        <p>{description}</p>
-        <span>{category}</span>
-      </div>
+      <article className='shadow-lg'>
+        <Image
+          src={`/images/posts/${path}.png`}
+          alt={title}
+          width={300}
+          height={200}
+        />
+        <div className='flex flex-col items-center p-4'>
+          <time className='self-end'>{date.toString()}</time>
+          <h3 className='mt-4 font-bold'>{title}</h3>
+          <p>{description}</p>
+          <span className='mt-4 rounded-lg bg-pink-400 px-2 py-1 text-sm text-pink-50'>
+            {category}
+          </span>
+        </div>
+      </article>
     </Link>
   );
 };
