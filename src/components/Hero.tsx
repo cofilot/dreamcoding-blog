@@ -10,6 +10,7 @@ export const Hero: React.FC = () => (
       alt='Picture of the author'
       width={200}
       height={200}
+      priority
       className='rounded-full'
     />
     <h2 className='mt-4 font-bold'>{"Hi, I'm Ellie"}</h2>
