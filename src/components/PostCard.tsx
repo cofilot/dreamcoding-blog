@@ -18,6 +18,7 @@ export const PostCard: React.FC<Props> = ({
           alt={title}
           width={300}
           height={200}
+          className='w-full'
         />
         <div className='flex flex-col items-center p-4'>
           <time className='self-end'>{date.toString()}</time>
