@@ -1,5 +1,6 @@
 import { getAllPosts } from '@/service/posts';
 
+import { MultiCarousel } from './MultiCarousel';
 import { PostCard } from './PostCard';
 
 export const CarouselPosts = async () => {
@@ -7,9 +8,11 @@ export const CarouselPosts = async () => {
   return (
     <section>
       <h2>You May Like</h2>
-      {posts.map((post) => (
-        <PostCard key={post.path} post={post} />
-      ))}
+      <MultiCarousel>
+        {posts.map((post) => (
+          <PostCard key={post.path} post={post} />
+        ))}
+      </MultiCarousel>
     </section>
   );
 };
