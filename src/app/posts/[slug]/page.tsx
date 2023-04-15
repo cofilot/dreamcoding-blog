@@ -10,9 +10,11 @@ export default async function PostPage({ params: { slug } }: Props) {
   const postData = await getPostData(slug);
 
   return (
-    <section>
+    <section className='p-4'>
       <h1>{postData.title}</h1>
-      <pre>{postData.content}</pre>
+      <pre className='mt-4 overflow-auto whitespace-pre-wrap'>
+        {postData.content}
+      </pre>
     </section>
   );
 }
