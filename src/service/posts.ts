@@ -21,3 +21,8 @@ export const getFeaturedPosts = (): Promise<Post[]> => {
   return getAllPosts() //
     .then((posts) => posts.filter((post) => post.featured));
 };
+
+export const getNonFeaturedPosts = (): Promise<Post[]> => {
+  return getAllPosts() //
+    .then((posts) => posts.filter((post) => !post.featured));
+};
