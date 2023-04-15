@@ -1,4 +1,4 @@
-import { getAllPosts } from '@/service/posts';
+import { getAllPosts, getPostData } from '@/service/posts';
 
 type Props = {
   params: {
@@ -6,8 +6,15 @@ type Props = {
   };
 };
 
-export default function PostPage({ params: { slug } }: Props) {
-  return <div>{slug}</div>;
+export default async function PostPage({ params: { slug } }: Props) {
+  const postData = await getPostData(slug);
+
+  return (
+    <section>
+      <h1>{postData.title}</h1>
+      <p>{postData.content}</p>
+    </section>
+  );
 }
 
 export const generateStaticParams = async () => {
