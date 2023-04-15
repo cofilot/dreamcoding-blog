@@ -4,16 +4,13 @@ import { FilterablePosts } from '@/components/FilterablePosts';
 
 import { getAllPosts } from '@/service/posts';
 
-type Props = {
-  searchParams: { category: string | undefined };
-};
-
-export default async function PostsPage({ searchParams: { category } }: Props) {
+export default async function PostsPage() {
   const posts = await getAllPosts();
+  const categories = [...new Set(posts.map((post) => post.category))];
 
   return (
     <section>
-      <FilterablePosts posts={posts} category={category} />
+      <FilterablePosts posts={posts} categories={categories} />
     </section>
   );
 }
