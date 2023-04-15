@@ -22,7 +22,7 @@ export const FilterablePosts = ({ posts, categories }: Props) => {
       : posts.filter((post) => post.category === selected);
 
   return (
-    <section className='flex justify-center space-x-8'>
+    <section className='flex justify-center gap-8'>
       <PostsGrid posts={filteredPosts} />
       <Categories
         categories={[ALL_POSTS, ...categories]}

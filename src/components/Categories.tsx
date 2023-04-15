@@ -17,7 +17,7 @@ const Categories: React.FC<Props> = ({ categories, selected, onClick }) => {
       >
         Category
       </h2>
-      <ul className='flex flex-col space-y-1'>
+      <ul className='flex flex-col gap-1'>
         {categories.map((category) => (
           <li
             key={category}
