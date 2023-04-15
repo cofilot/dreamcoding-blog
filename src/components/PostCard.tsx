@@ -24,7 +24,7 @@ export const PostCard: React.FC<Props> = ({
           <time className='self-end'>{date.toString()}</time>
           <h3 className='mt-4 truncate font-bold'>{title}</h3>
           <p className='w-full truncate text-center'>{description}</p>
-          <span className='mt-4 rounded-lg bg-pink-400 px-2 py-1 text-sm text-pink-50'>
+          <span className='mt-4 rounded-sm bg-pink-400 px-2 py-1 text-sm text-pink-50'>
             {category}
           </span>
         </div>
