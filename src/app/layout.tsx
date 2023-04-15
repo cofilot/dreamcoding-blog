@@ -17,20 +17,23 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en' className={sans.className}>
-      <body>
-        <header>
+      <body className='flex flex-col'>
+        <header className='sticky top-0 flex justify-between p-4 backdrop-blur-xl'>
           <Link href='/'>
             <h1>{"Ellie's Blog"}</h1>
           </Link>
-          <nav>
+          {/* use space-x for the browser without supporting flex gap */}
+          <nav className='space-x-4'>
             <Link href='/'>home</Link>
             <Link href='/about'>about</Link>
             <Link href='/posts'>posts</Link>
             <Link href='/contact'>contact</Link>
           </nav>
         </header>
-        <main>{children}</main>
-        <footer>
+        <main className='m-auto w-full max-w-5xl grow bg-sky-100'>
+          {children}
+        </main>
+        <footer className='sticky bottom-0 p-2 text-center text-sm backdrop-blur-xl'>
           {"Don't forget to CODE your DREAM | All Right Reserved"}
         </footer>
       </body>
