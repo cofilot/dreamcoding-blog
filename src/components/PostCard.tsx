@@ -22,7 +22,7 @@ export const PostCard: React.FC<Props> = ({
         <div className='flex flex-col items-center p-4'>
           <time className='self-end'>{date.toString()}</time>
           <h3 className='mt-4 font-bold'>{title}</h3>
-          <p>{description}</p>
+          <p className='w-full truncate text-center'>{description}</p>
           <span className='mt-4 rounded-lg bg-pink-400 px-2 py-1 text-sm text-pink-50'>
             {category}
           </span>
