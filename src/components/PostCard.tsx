@@ -12,7 +12,7 @@ export const PostCard: React.FC<Props> = ({
 }) => {
   return (
     <Link href={`posts/${path}`}>
-      <article className='overflow-hidden rounded-sm shadow-lg'>
+      <article className='overflow-hidden rounded-sm shadow-md hover:shadow-lg'>
         <Image
           src={`/images/posts/${path}.png`}
           alt={title}
@@ -22,7 +22,7 @@ export const PostCard: React.FC<Props> = ({
         />
         <div className='flex flex-col items-center p-4'>
           <time className='self-end'>{date.toString()}</time>
-          <h3 className='mt-4 font-bold'>{title}</h3>
+          <h3 className='mt-4 truncate font-bold'>{title}</h3>
           <p className='w-full truncate text-center'>{description}</p>
           <span className='mt-4 rounded-lg bg-pink-400 px-2 py-1 text-sm text-pink-50'>
             {category}
