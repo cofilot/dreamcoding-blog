@@ -1,5 +1,19 @@
 import React from 'react';
 
-export default function PostsPage() {
-  return <section>Posts</section>;
+import { FilterablePosts } from '@/components/FilterablePosts';
+
+import { getAllPosts } from '@/service/posts';
+
+type Props = {
+  searchParams: { category: string | undefined };
+};
+
+export default async function PostsPage({ searchParams: { category } }: Props) {
+  const posts = await getAllPosts();
+
+  return (
+    <section>
+      <FilterablePosts posts={posts} category={category} />
+    </section>
+  );
 }
