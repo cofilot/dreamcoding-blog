@@ -12,7 +12,7 @@ export default async function PostPage({ params: { slug } }: Props) {
   return (
     <section>
       <h1>{postData.title}</h1>
-      <p>{postData.content}</p>
+      <pre>{postData.content}</pre>
     </section>
   );
 }
