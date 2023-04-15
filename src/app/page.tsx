@@ -1,3 +1,47 @@
 export default function Home() {
-  return <main className='bg-gray-500'></main>;
+  return (
+    <section>
+      <ul>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+      </ul>
+    </section>
+  );
 }

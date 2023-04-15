@@ -1,6 +1,7 @@
-import './globals.css';
-
 import { Open_Sans } from 'next/font/google';
+import Link from 'next/link';
+
+import './globals.css';
 
 const sans = Open_Sans({ subsets: ['latin'] });
 
@@ -16,7 +17,23 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en' className={sans.className}>
-      <body>{children}</body>
+      <body>
+        <header>
+          <Link href='/'>
+            <h1>{"Ellie's Blog"}</h1>
+          </Link>
+          <nav>
+            <Link href='/'>home</Link>
+            <Link href='/about'>about</Link>
+            <Link href='/posts'>posts</Link>
+            <Link href='/contact'>contact</Link>
+          </nav>
+        </header>
+        <main>{children}</main>
+        <footer>
+          {"Don't forget to CODE your DREAM | All Right Reserved"}
+        </footer>
+      </body>
     </html>
   );
 }
