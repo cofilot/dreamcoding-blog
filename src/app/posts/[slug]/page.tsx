@@ -1,3 +1,5 @@
+import MarkdownViewer from '@/components/MarkdownViewer';
+
 import { getAllPosts, getPostData } from '@/service/posts';
 
 type Props = {
@@ -10,11 +12,9 @@ export default async function PostPage({ params: { slug } }: Props) {
   const postData = await getPostData(slug);
 
   return (
-    <section className='p-4'>
+    <section>
       <h1>{postData.title}</h1>
-      <pre className='mt-4 overflow-auto whitespace-pre-wrap'>
-        {postData.content}
-      </pre>
+      <MarkdownViewer content={postData.content}/>
     </section>
   );
 }
